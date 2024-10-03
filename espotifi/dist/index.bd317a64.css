@@ -1,0 +1,28 @@
+.flex {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+}
+
+.cover {
+  background-color: gray;
+  width: 200px;
+  height: 200px;
+}
+
+.c1 {
+  background-image: url("cover1.2d616654.jpg");
+  background-size: cover;
+}
+
+.c2 {
+  background-image: url("cover2.e7e1a052.jpg");
+  background-size: cover;
+}
+
+.c3 {
+  background-image: url("cover3.73456951.jpg");
+  background-size: cover;
+}
+/*# sourceMappingURL=index.bd317a64.css.map */

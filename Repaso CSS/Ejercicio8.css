@@ -1,0 +1,21 @@
+.card{
+    width: 300px;
+    box-shadow: 0px 0px 4px 4px rgb(160, 159, 159);
+}
+#titulo{
+    background-color: gray;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 8px;
+}
+#body{
+    font-style: italic;
+    padding: 8px;
+    text-decoration: justify;
+}
+#pie{
+    background-color: gainsboro;
+    text-align: center;
+    padding: 8px;
+}
