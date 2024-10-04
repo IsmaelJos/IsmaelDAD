@@ -7,7 +7,7 @@ export default class Champ {
         this.skin = "";
         this.barra = data.partype;    // Pokemon de frente
         this.title = data.title;      // Pokemon de espaldas
-        this.img = data.image.full;                     // Tipo del pokemon (Devuelve un array)
+        this.img = data.image.full;   // Tipo del pokemon (Devuelve un array)
     }
     setSkin(img){
         this.skin = img

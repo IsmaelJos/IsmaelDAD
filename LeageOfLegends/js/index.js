@@ -48,18 +48,218 @@ const showWiki = async () => {
     const wiki = document.getElementById("wiki");
 
     for(var i = 0; i < champs.length; i++) {
-        wiki.innerHTML +=    `<div class="card">
+        //Maná,Pozo sangriento,Energía,Ferocidad,Escudo,Furia,Flujo,Coraje,Calor,Ráfaga carmesí 
+
+        switch (champs[i].barra){
+            case "Pozo sangriento":
+                wiki.innerHTML +=    `<div class="card">
                                     <img  src="${champs[i].img}">
                                     <img class="front" src="${champs[i].skin}">
-                                    <div class="nombre">
-                                        ${champs[i].name}
-                                    </div>
-                                    <div class="titulo">
-                                        ${champs[i].title}
-                                    </div>
-                                    <div class="barra">
-                                        ${champs[i].barra}
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="PozoSangriento">
+                                            ${champs[i].barra}
+                                        </div>
                                     </div>
                                 </div>`
+                break;
+            case "Energía":
+                wiki.innerHTML +=    `<div class="card">
+                                    <img  src="${champs[i].img}">
+                                    <img class="front" src="${champs[i].skin}">
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="Energía">
+                                            ${champs[i].barra}
+                                        </div>
+                                    </div>
+                                </div>`
+                break;
+            case "Ferocidad":
+                wiki.innerHTML +=    `<div class="card">
+                                    <img  src="${champs[i].img}">
+                                    <img class="front" src="${champs[i].skin}">
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="Ferocidad">
+                                            ${champs[i].barra}
+                                        </div>
+                                    </div>
+                                </div>`
+                break;
+            case "Escudo":
+                wiki.innerHTML +=    `<div class="card">
+                                    <img  src="${champs[i].img}">
+                                    <img class="front" src="${champs[i].skin}">
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="Escudo">
+                                            ${champs[i].barra}
+                                        </div>
+                                    </div>
+                                </div>`
+                break;
+            case "Furia":
+                wiki.innerHTML +=    `<div class="card">
+                                    <img  src="${champs[i].img}">
+                                    <img class="front" src="${champs[i].skin}">
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="Furia">
+                                            ${champs[i].barra}
+                                        </div>
+                                    </div>
+                                </div>`
+                break;
+            case "Flujo":
+                wiki.innerHTML +=    `<div class="card">
+                                    <img  src="${champs[i].img}">
+                                    <img class="front" src="${champs[i].skin}">
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="Flujo">
+                                            ${champs[i].barra}
+                                        </div>
+                                    </div>
+                                </div>`
+                break;
+            case "Coraje":
+                wiki.innerHTML +=    `<div class="card">
+                                    <img  src="${champs[i].img}">
+                                    <img class="front" src="${champs[i].skin}">
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="Coraje">
+                                            ${champs[i].barra}
+                                        </div>
+                                    </div>
+                                </div>`
+                break;
+            case "Calor":
+                wiki.innerHTML +=    `<div class="card">
+                                    <img  src="${champs[i].img}">
+                                    <img class="front" src="${champs[i].skin}">
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="Calor">
+                                            ${champs[i].barra}
+                                        </div>
+                                    </div>
+                                </div>`
+                break;
+            case "Ráfaga carmesí":
+                wiki.innerHTML +=    `<div class="card">
+                                    <img  src="${champs[i].img}">
+                                    <img class="front" src="${champs[i].skin}">
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="RáfagaCarmesí">
+                                            ${champs[i].barra}
+                                        </div>
+                                    </div>
+                                </div>`
+                break;
+                case "Maná":
+                    wiki.innerHTML +=    `<div class="card">
+                                        <img  src="${champs[i].img}">
+                                        <img class="front" src="${champs[i].skin}">
+                                        <div class="textoCard">
+                                            <div class="nombreTitulo">
+                                                <div class="nombre">
+                                                    ${champs[i].name}
+                                                </div>
+                                                <div class="titulo">
+                                                    ${champs[i].title}
+                                                </div>
+                                            </div>
+                                            <div class="Maná">
+                                                ${champs[i].barra}
+                                            </div>
+                                        </div>
+                                    </div>`
+                    break;
+            default:
+                wiki.innerHTML +=    `<div class="card">
+                                    <img  src="${champs[i].img}">
+                                    <img class="front" src="${champs[i].skin}">
+                                    <div class="textoCard">
+                                        <div class="nombreTitulo">
+                                            <div class="nombre">
+                                                ${champs[i].name}
+                                            </div>
+                                            <div class="titulo">
+                                                ${champs[i].title}
+                                            </div>
+                                        </div>
+                                        <div class="nada">
+                                            ${champs[i].barra}
+                                        </div>
+                                    </div>
+                                </div>`
+        }
+    
     }
 }
