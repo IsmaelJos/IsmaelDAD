@@ -1,6 +1,6 @@
 /* Hoja de estilo para la pokedex */
 body{
-    background-color: black;
+    background-color: rgb(27, 31, 48);
     text-align: center;
     align-items: center;
     justify-items: center;
@@ -10,7 +10,7 @@ body{
     height: 300px;
 }
 .button{
-    background-color: red;
+    background-color: rgba(0, 102, 255, 0.445);
     border-radius: 8px;
     border: none;
     color: white;
@@ -25,13 +25,13 @@ body{
 #wiki{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    grid-gap: 10px 10px;
+    grid-gap: 20px 7px;
     width: 100%;
 }
 .card{
-    border: 2px solid rgb(78,78,78);
+    border: 2px solid black;
     border-radius: 5px;
-    background: linear-gradient(rgb(88,88,88),rgb(0,0,0));
+    background-color: black;
     font-family: DejaVu Sans Mono, monospace;
     text-align: center;
     width: 308px;
