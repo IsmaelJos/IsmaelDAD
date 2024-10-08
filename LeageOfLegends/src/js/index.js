@@ -4,11 +4,15 @@ import Champ from './Champ.js';
 // Creamos un array para los 151 pokemons que obtendremos desde la API
 var champs = [];
 
+const welcome = new Audio('../assets/songs/welcome.mp3');
+
 // Seleccionamos el elemento button del DOM usando querySelector 
 const button = document.querySelector("button");
 // Agregamos un event listener al botón para que se mantenga a la espera de hacer click en él
 // Cuando se recibe el click, se ejecuta la función flecha
 button.addEventListener("click", () => {
+    
+    welcome.play();
     // Al hacer click sobre el botón, cambiamos su visibilidad y lo ocultamos
     document.querySelector('#button').style.visibility = 'hidden';
     // También cambiamos la visibilidad del elemento #pokedex, y lo mostramos en pantalla
