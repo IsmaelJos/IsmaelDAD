@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- SECCIÓN NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-4" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../img/img/pdc-logo.png" alt="Logo" width="15" height="24"
+                    class="d-inline-block align-text-top">
+                Canarias
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="portada.html">Portada</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="deportes.html">Deportes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Rutas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contáctanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-exclamation-triangle-fill text-warning"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-exclamation-circle-fill text-danger"></i></a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN BROADCRUMB -->
+    <nav class="bg-light" aria-label="breadcrumb">
+        <ol class="breadcrumb p-3">
+            <li class="breadcrumb-item active ms-4">Rutas</li>
+        </ol>
+    </nav>
+
+    <!-- SECCIÓN RUTAS -->
+    <!-- PRIMERA FILA-->
+    <div class="container-fluid">
+        <div class="row" data-masonry='{"percentPosition": true }'>
+            <div class="col-12 col-md-4">
+                <div class="card border-success my-2" >
+                    <h5 class="card-header text-white bg-danger py-3">Destacado</h5>
+                    <img src="../img/img/rutas-marcos-cordero.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ruta de Marcos y Cordero</h5>
+                        <p class="card-text">Situada en la isla de La palma, se considera una de las rutas
+                            indispensables
+                            , no solo de esta isla, sino de toda Canarias.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card my-2 bg-success" >
+                    <h5 class="card-header text-white">Frase Célebre</h5>
+                    <div class="card-body text-white">
+                        <h5 class="card-title">El Arte</h5>
+                        <p class="card-text fs-5">"El arte es algo mucho más importante, mucho más profundom para no caer en la elemental
+                             y pobre vulgaridad de la ordinariez humana cada vez más acentuada, cuando no se ha planificado inteligentemente un despliegue
+                             de la llamada educación cívica y cultural·"
+                        </p>
+                        <small><span class="text-secondary">-- </span>Cesar Manrique en <i>Memorias y Obras</i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card border-primary my-2" >
+                    <img src="../img/img/rutas-barranco-las-vacas.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Barranco las Vacas</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">Gran Canaria</h6>
+                        <p class="card-text">Estas llamativas formaciones tienen cierto parecido al famoso Antelope
+                            Canyon de Estados Unidos. ¿Por qué? Por sus peculiares formaciones rocosas
+                            llamadas Tobas de Colores.
+                        </p>
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card bg-primary my-2">
+                    <div class="card-body text-white text-center">
+                        <p class="card-text">
+                            El agua se espera en la tierra y la guagua 
+                            en la carretera
+                        </p>
+                        <small>Refranero popular</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card my-2">
+                    <img src="../img/img/rutas-teide.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text text-muted">Ascensión al Teide</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card my-2">
+                    <div class="card-body bg-info text-white text-center">
+                        <h5 class="card-title">Mil ventanas</h5>
+                        <p class="card-text">Ruta situada en el municipio de Güimar no apta para 
+                            aquellas personas que sufren miedo a las alturas
+                        </p>
+                        <small class="card-text">Foto cedida por un fotógrafo</small>
+                    </div>
+                    <img src="../img/img/rutas-mil-ventanas.jpg" class="card-img-top" alt="...">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card border-info my-2">
+                    <h6 class="card-header text-info">Tenerife</h6>
+                    <img src="../img/img/rutas-afur.jpg" class="card-img-top" alt="...">
+                    <h6 class="card-header text-info">Barranco de Afur</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+</body>
+
+</html>
