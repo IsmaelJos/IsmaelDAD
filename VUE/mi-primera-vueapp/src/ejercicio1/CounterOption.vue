@@ -11,7 +11,7 @@
 <script>
     import {defineComponent} from 'vue';
     export default defineComponent({
-        name: 'CounterExtendOption',
+        name: 'CounterOption',
 
         data(){
             let counter = 0;
