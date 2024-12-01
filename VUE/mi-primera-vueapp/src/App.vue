@@ -3,7 +3,7 @@
     <PostContainer/>
 </template>
 <script setup>
-    import PostContainer from './components/PostContainer.vue';
+    import PostContainer from './ejercicio1/CounterOption.vue';
 
 
 </script>
