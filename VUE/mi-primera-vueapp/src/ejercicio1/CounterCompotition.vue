@@ -11,7 +11,7 @@
 <script>
     import {defineComponent, ref} from 'vue';
     export default defineComponent({
-        name: 'CounterExtendComposition',
+        name: 'CounterComposition',
 
         setup(){
             let counter = ref(0);
