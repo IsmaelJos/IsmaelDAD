@@ -1,12 +1,11 @@
 <template>
-  <h1>Listado de post:</h1>
-    <PostContainer/>
+  <FormArcane/>
 </template>
+
 <script setup>
-    import PostContainer from './ejercicio1/CounterOption.vue';
-
-
+  import FormArcane from './arcane/components/FormArcane';
 </script>
-<style>
 
+<style>
+  
 </style>
