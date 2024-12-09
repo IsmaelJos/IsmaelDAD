@@ -1,9 +1,9 @@
 <template>
-  <FormArcane/>
+  <CounterCompotition/>
 </template>
 
 <script setup>
-  import FormArcane from './arcane/components/FormArcane';
+import CounterCompotition from './ejercicio1/CounterCompotition.vue';
 </script>
 
 <style>
