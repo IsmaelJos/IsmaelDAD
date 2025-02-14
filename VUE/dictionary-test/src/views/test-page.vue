@@ -16,6 +16,7 @@ import { useWordGame } from '../modules/dictionary-test/camposables/useWordGame'
     <h3>{{ word }}</h3>
 
   </section>
+  
 
 </template>
 
