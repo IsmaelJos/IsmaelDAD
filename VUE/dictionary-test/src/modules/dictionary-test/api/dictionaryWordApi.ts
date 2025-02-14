@@ -1,9 +1,8 @@
 import axios from 'axios'
-import type { randomWord } from '../interfaces'
+import type { RootObject } from '../interfaces'
 
 export class dictionaryWordApi {
-  wordFromList = () => {
-    const words = [
+    words = [
       'abandon',
       'abbreviate',
       'abdomen',
@@ -46,14 +45,16 @@ export class dictionaryWordApi {
       'related',
       'admire',
       'emotion',
-      'compose',
+      'compose'
     ]
-    const word = words[Math.floor(Math.random() * words.length)]
-    return word
-  }
+    word = this.words[Math.floor(Math.random() * this.words.length)]
+    // return word
+
 
   async get() {
-    const responce = await axios.get('https://api.dictionaryapi.dev/api/v2/entries/en/'+this.wordFromList)
-    return responce.data as randomWord
+    console.log('https://api.dictionaryapi.dev/api/v2/entries/en/'+this.word)
+    const response = await axios.get('https://api.dictionaryapi.dev/api/v2/entries/en/'+this.word)
+
+    return response.data as RootObject
   }
 }

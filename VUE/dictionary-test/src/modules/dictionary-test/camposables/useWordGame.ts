@@ -1,5 +1,5 @@
 import { computed, onMounted, ref } from "vue"
-import { GameStatus, type randomWord } from "../interfaces"
+import { GameStatus, type RootObject } from "../interfaces"
 import { dictionaryWordApi } from '../api/dictionaryWordApi';
 import confetti from 'canvas-confetti';
 
@@ -11,6 +11,7 @@ export const useWordGame = () => {
 
     const getValue = async (): Promise<randomWord> =>{
       const dictionaryWordApi0 = new dictionaryWordApi()
+
       const response = await dictionaryWordApi0.get();
 
       return{
@@ -35,6 +36,7 @@ export const useWordGame = () => {
 
     onMounted( async () =>{
       word.value = await getValue();
+      console.log(word.value)
     });
 
     return{
