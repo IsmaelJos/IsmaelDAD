@@ -7,17 +7,17 @@ export interface RootObject {
   sourceUrls: string[]
 }
 
-export interface Meaning {
+ interface Meaning {
   partOfSpeech: string
   definitions: Definition[]
   synonyms: string[]
-  antonyms: any[]
+  antonyms: unknown[] | null;
 }
 
-export interface Definition {
+ interface Definition {
   definition: string
-  synonyms: any[]
-  antonyms: any[]
+  synonyms: unknown[] | null;
+  antonyms: unknown[] | null;
   example?: string
 }
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useWordGame } from '../modules/dictionary-test/camposables/useWordGame';
 
-  const {isLoading, word} = useWordGame();
+  const {isLoading, wordSelected} = useWordGame();
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import { useWordGame } from '../modules/dictionary-test/camposables/useWordGame'
 
   <section v-else class="flex flex-col justify-center items-center w-screen h-screen">
     <h1 class="m-5">Which word is this?</h1>
-    <h3>{{ word }}</h3>
+    <h3>{{ wordSelected }}</h3>
 
   </section>
 
