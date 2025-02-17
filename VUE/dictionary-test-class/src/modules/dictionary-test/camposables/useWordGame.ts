@@ -1,13 +1,12 @@
 import { computed, onMounted, ref } from "vue"
-import { GameStatus, type RandomWord} from "../interfaces"
+import { GameStatus} from "../interfaces"
 import { dictionaryWordApi } from '../api/dictionaryWordApi';
 import confetti from 'canvas-confetti';
 
 export const useWordGame = () => {
 
-    const wordSelected = ref<RandomWord[]>([]);
     const gameStatus = ref<GameStatus>( GameStatus.Playing);
-    const isLoading = computed(()=> wordSelected.value == null);
+    const isLoading = computed(()=> definitions.value == null);
 
     const words = [
             'abandon',
@@ -54,21 +53,20 @@ export const useWordGame = () => {
             'emotion',
             'compose'
           ]
-    const wordApi = words[Math.floor(Math.random() * words.length)]
+    const wordApi = ref<string>(words[Math.floor(Math.random() * words.length)])
 
-    const getValue = async (): Promise<RandomWord[]> =>{
+    const definitions = ref<string[]>([]);
 
-      const response = await new dictionaryWordApi().get(wordApi);
-
-      return [{
-        word: wordApi,
-        meanings: response.meanings.map(m => {return m.definitions.map(d => {return d.definition})})
-      }]
-
-    }
+    // Realizar la petición a la API
+    const fetchDefinitions = async () => {
+      const response = await new dictionaryWordApi().get(wordApi.value);
+        const meanings = response.data[0]?.meanings || [];
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        definitions.value = meanings.flatMap((meaning: any) => meaning.definitions.map((def: any) => def.definition));
+    };
 
     const checkAnswer = (tryName: string) =>{
-      const hasWon = wordApi === tryName;
+      const hasWon = wordApi.value === tryName;
       if(hasWon){
         gameStatus.value = GameStatus.Won;
         confetti({
@@ -82,13 +80,14 @@ export const useWordGame = () => {
     }
 
     onMounted( async () =>{
-      wordSelected.value = await getValue();
-      console.log(wordSelected.value)
+      fetchDefinitions()
+      console.log(definitions.value)
     });
 
     return{
       isLoading,
-      wordSelected,
-      checkAnswer
+      wordApi,
+      checkAnswer,
+      definitions,
     }
 }

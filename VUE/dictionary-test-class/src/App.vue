@@ -1,6 +1,6 @@
 <script lang="ts">
-import TestPage from './views/TestPage.vue'
 import { defineComponent } from 'vue';
+import TestPage from './views/TestPage.vue';
   export default defineComponent({
     components : {TestPage}
   })
