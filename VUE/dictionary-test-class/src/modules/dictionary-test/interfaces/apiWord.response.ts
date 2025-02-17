@@ -11,13 +11,13 @@ export interface Meaning {
   partOfSpeech: string
   definitions: Definition[]
   synonyms: string[]
-  antonyms: unknown[] | null;
+  antonyms: unknown[] | null
 }
 
 export interface Definition {
   definition: string
-  synonyms: unknown[] | null;
-  antonyms: unknown[] | null;
+  synonyms: unknown[] | null
+  antonyms: unknown[] | null
   example?: string
 }
 
