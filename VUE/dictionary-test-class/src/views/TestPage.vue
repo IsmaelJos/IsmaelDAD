@@ -2,10 +2,12 @@
 import WordInsertGuess from '@/components/WordInsertGuess.vue';
 import { useWordGame } from '../modules/dictionary-test/camposables/useWordGame'
 import WordDescription from '@/components/WordDescription.vue';
+import { GameStatus } from '@/modules/dictionary-test/interfaces';
 
 const {
   isLoading,
   wordApi,
+  gameStatus,
   definitions,
   userGuess,
   checkGuess,
@@ -23,14 +25,14 @@ const {
   </section>
 
   <section v-else class="flex flex-col justify-center items-center">
-    <h1 class="mt-[200px]">Which word is this?</h1>
+    <h1 class="mt-[100px]">Which word is this?</h1>
 
-    <div class="word-container">{{ wordDisplay }}</div>
+    <div class="word-container" v-if="gameStatus == GameStatus.Playing">{{ wordDisplay }}</div>
+    <div class="word-container" v-else>{{ wordApi }}</div>
 
-    <input type="text" v-model="userGuess" :maxlength="wordApi.length" class="guess-input"
+    <input type="text" v-model="userGuess" :maxlength="wordApi.length" class="guess-input mb-[40px]"
       placeholder="Enter your guess"
     />
-
     <WordInsertGuess
     :wordApi="wordApi"
     :wordDisplay="wordDisplay"

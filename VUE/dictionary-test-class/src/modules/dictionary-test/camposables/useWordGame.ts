@@ -6,7 +6,6 @@ import confetti from 'canvas-confetti'
 export const useWordGame = () => {
   const gameStatus = ref<GameStatus>(GameStatus.Playing)
   const isLoading = computed(() => definitions.value == null)
-
   const words = [
     'abandon',
     'abbreviate',
@@ -125,6 +124,7 @@ export const useWordGame = () => {
     wordDisplay,
 
     //FUNCTION
+    gameStatus,
     isLoading,
     wordApi,
     checkAnswer,
