@@ -79,12 +79,46 @@ export const useWordGame = () => {
       gameStatus.value = GameStatus.Lost;
     }
 
+
+    // GAME
+
+    const wordDisplay = ref<string>('');
+    const userGuess = ref<string>('');
+    const feedback = ref<string | null>(null);
+    const feedbackColor = ref<string>('red');
+
+    const updateWordDisplay = () => {
+      wordDisplay.value = '_ '.repeat(wordApi.value.length);
+    };
+
+    const checkGuess = () => {
+      if (userGuess.value.trim().toLowerCase() === wordApi.value.toLowerCase()) {
+        feedback.value = 'Congratulations! You guessed the word!';
+        feedbackColor.value = 'green';
+      } else {
+        feedback.value = 'Wrong guess. Try again!';
+        feedbackColor.value = 'red';
+      }
+
+      // Clear the user guess after checking
+      userGuess.value = '';
+    };
+
     onMounted( async () =>{
+      updateWordDisplay()
       fetchDefinitions()
       console.log(definitions.value)
     });
 
     return{
+      //GAME
+      checkGuess,
+      userGuess,
+      feedback,
+      feedbackColor,
+      wordDisplay,
+
+      //FUNCTION
       isLoading,
       wordApi,
       checkAnswer,
