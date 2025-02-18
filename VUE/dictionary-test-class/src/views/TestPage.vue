@@ -14,6 +14,7 @@ const {
   feedback,
   feedbackColor,
   wordDisplay,
+  failCount,
 } = useWordGame()
 
 </script>
@@ -34,14 +35,16 @@ const {
       placeholder="Enter your guess"
     />
     <WordInsertGuess
-    :wordApi="wordApi"
-    :wordDisplay="wordDisplay"
-    :checkGuess="checkGuess"
-    :feedback="feedback"
-    :feedbackColor="feedbackColor"
+      :wordApi="wordApi"
+      :wordDisplay="wordDisplay"
+      :checkGuess="checkGuess"
+      :feedback="feedback"
+      :feedbackColor="feedbackColor"
+      :gameStatus="gameStatus"
     />
     <WordDescription
       :definitions="definitions"
+      :failCount="failCount"
     />
   </section>
 </template>
@@ -51,6 +54,7 @@ const {
   font-size: 24px;
   font-family: Arial, sans-serif;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .guess-input {
   font-size: 24px;
